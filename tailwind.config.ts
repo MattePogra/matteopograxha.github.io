@@ -74,7 +74,7 @@ export default {
       transitionProperty: {
         height: "height",
       },
-      typography: (theme) => ({
+      typography: (theme: any) => ({
         DEFAULT: {
           css: {
             fontSize: theme("fontSize.base"), // Apply the base font size globally
