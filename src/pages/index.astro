@@ -33,27 +33,64 @@ import PageLayout from "@/layouts/Base.astro";
 		<h4 class="text-lg font-semibold mb-2">Working Papers</h4>
 		<ul class="mb-8 space-y-4">
 			<li>
-				<strong>
-				<span class="text-link">Online Virality, Broadcast Visibility, and the Incentives for Extreme Rhetoric</span> - Job Market Paper (New draft coming soon!)
-				<!-- Abstract Section -->
-				<p class="mt-2 ml-4 text-[0.75rem]">
-					Does going viral on social media buy access to television? This paper studies whether viral success serves as a bridge from low-barrier platforms to television, a high-barrier gatekeeping arena. Using a dataset linking roughly 700,000 tweets by Italian Members of Parliament (MPs) from 2018 to 2022 to daily speaking time on major talk shows and newscasts, I estimate a dynamic difference-in-differences around days when an MP reaches the top 1 percent of engagement across all MP tweets. Viral MPs experience clear increases in next-day television invitations, with effects concentrated on private channels, consistent with market-driven gatekeeping. I then investigate what drives virality: extreme rhetoric, namely, institutional delegitimization, group-based discrimination, or zero-sum framing, substantially increases engagement and the likelihood of reaching the viral threshold. A supply-side model rationalizes these incentives: producers use virality as a noisy signal of audience interest, citizens discount exaggeration but engage expressively, and the MP optimally exaggerates rhetoric to trade reputation for visibility.
-				</p>
-			</li>
+				`<strong>
+					<span class="text-link">Online Virality, Broadcast Visibility, and the Incentives for Extreme Rhetoric</span>
+					(Job Market Paper — new draft coming soon)
+				</strong>
+				<details class="group mt-1 ml-4">
+					<summary class="cursor-pointer flex items-center gap-2 select-none">
+					<!-- Chevron -->
+					<span class="inline-block border-r border-b w-2.5 h-2.5 rotate-[-45deg] transition-transform group-open:rotate-45"></span>
+
+					<!-- Toggle labels (no JS) -->
+					<span class="group-open:hidden underline">Show abstract</span>
+					<span class="hidden group-open:inline underline">Hide abstract</span>
+					</summary>
+
+					<p class="mt-2 text-[0.75rem]">
+					Does going viral on social media buy access to television? This paper studies whether viral success
+					serves as a bridge from low barrier platforms to television, a high barrier gatekeeping arena. Using a dataset
+					linking roughly 700,000 tweets by Italian Members of Parliament (MPs) from 2018 to 2022 to daily speaking time
+					on major talk shows and newscasts, I estimate a dynamic difference in differences around days when an MP reaches
+					the top 1 percent of engagement across all MP tweets. Viral MPs experience clear increases in next day television
+					invitations, with effects concentrated on private channels, consistent with market driven gatekeeping. I then show
+					that extreme rhetoric, defined as institutional delegitimization, group based discrimination, or zero sum framing,
+					strongly predicts virality and increases the probability of reaching the threshold. A supply side model
+					rationalizes these incentives: producers use virality as a noisy signal of audience interest, citizens discount
+					exaggeration but engage expressively, and the MP optimally exaggerates rhetoric to trade reputation for visibility.
+					</p>
+				</details>
+			</li>`
 		</ul>
 
 		<ul class="mb-8 space-y-4">
 			<li>
 				<strong>
-				<a href="https://cepr.org/publications/dp18383" class="text-link" target="_blank" rel="noopener noreferrer">Man Bites Dog: Editorial Choices and Biases in the Reporting of Weather Events</a>
-				</strong> - with
-				<a class="cactus-link" href="https://nicolamastrorocco.com/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Nicola Mastrorocco</a>, 
-				<a class="cactus-link" href="https://ariannaornaghi.com/" target="_blank" rel="noopener noreferrer">Arianna Ornaghi</a>, and 
-				<a class="cactus-link" href="https://stephanewolton.com/" target="_blank" rel="noopener noreferrer">Stephane Wolton</a> - <span style="font-size:0.9em">Revise and Resubmit, <em>Journal of Public Economics</em></span>
-				<!-- Abstract Section -->
-				<p class="mt-2 ml-4 text-[0.75rem]">
-				Every day, editors of media outlets decide what is news and what is not. We unpack the process of news production by looking at the share of newscasts devoted to weather events by local TV stations in the United States. We document that coverage increases with the severity of the weather event that day. We also uncover that stations operating in Democratic-leaning markets devote more time to extreme weather events and mention climate change more than outlets in Republican-leaning markets. We make sense of these publication and presentation biases with a stylised model of news production and consumption.
-				</p>
+					<a href="https://cepr.org/publications/dp18383" class="text-link" target="_blank" rel="noopener noreferrer">
+					Man Bites Dog: Editorial Choices and Biases in the Reporting of Weather Events
+					</a>
+				</strong>
+				— with
+				<a class="cactus-link" href="https://nicolamastrorocco.com/" target="_blank" rel="noopener noreferrer">Nicola Mastrorocco</a>,
+				<a class="cactus-link" href="https://ariannaornaghi.com/" target="_blank" rel="noopener noreferrer">Arianna Ornaghi</a>, and
+				<a class="cactus-link" href="https://stephanewolton.com/" target="_blank" rel="noopener noreferrer">Stephane Wolton</a>
+				<span class="ml-1 text-[0.9em]">(R&amp;R, <em>Journal of Public Economics</em>)</span>
+				<details class="group mt-1 ml-4">
+					<summary class="cursor-pointer flex items-center gap-2 select-none">
+					<!-- Chevron -->
+					<span class="inline-block border-r border-b w-2.5 h-2.5 rotate-[-45deg] transition-transform group-open:rotate-45"></span>
+					<!-- Toggle labels -->
+					<span class="group-open:hidden underline">Show abstract</span>
+					<span class="hidden group-open:inline underline">Hide abstract</span>
+					</summary>
+					<p class="mt-2 text-[0.75rem]">
+					Every day, editors of media outlets decide what is news and what is not. We unpack the process of news
+					production by looking at the share of newscasts devoted to weather events by local TV stations in the United States.
+					Coverage increases with the severity of the weather event that day. Stations in Democratic leaning markets devote
+					more time to extreme weather and mention climate change more than outlets in Republican leaning markets. We interpret
+					these publication and presentation patterns with a stylised model of news production and consumption.
+					</p>
+				</details>
 			</li>
 		</ul>
 
@@ -61,16 +98,57 @@ import PageLayout from "@/layouts/Base.astro";
 		<!-- Work in Progress Section -->
 		<h4 class="text-lg font-semibold mb-2">Work in Progress</h4>
 		<ul class="space-y-2">
-			<li style="margin-bottom: 0.8em;">
-				<strong>(Do not) Keep Calm and Carry On: TV and Heated Debates</strong> - with 
-				<a class="cactus-link" href="https://www.nicola-fontana.com/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Nicola Fontana</a>
+			<li class="mb-3">
+				<strong>(Do not) Keep Calm and Carry On: TV and Heated Debates</strong>
+				— with
+				<a class="cactus-link" href="https://www.nicola-fontana.com/" target="_blank" rel="noopener noreferrer">Nicola Fontana</a>
+
+				<details class="group mt-1 ml-4">
+					<summary class="cursor-pointer flex items-center gap-2 select-none">
+					<!-- Chevron -->
+					<span class="inline-block border-r border-b w-2.5 h-2.5 rotate-[-45deg] transition-transform group-open:rotate-45"></span>
+					<!-- Toggle labels -->
+					<span class="group-open:hidden underline">Show abstract</span>
+					<span class="hidden group-open:inline underline">Hide abstract</span>
+					</summary>
+					<p class="mt-2 text-[0.75rem]">
+					Does confrontation on television attract more viewers? This paper studies whether heated debates draw larger audiences
+					than respectful discussions, and whether spectacle driven formats impair citizen learning. We develop a framework using
+					machine learning to extract debate intensity, namely interruptions, overlapping speech, and volume, from audio of Italian
+					political talk shows, linking these features to minute by minute audience data. We implement a dynamic difference in
+					differences design that exploits within episode variation in debate intensity to measure viewership responses. We plan to
+					run a randomized experiment to test whether spectacle captures attention while reducing information retention.
+					</p>
+				</details>
 			</li>
-			<li style="margin-bottom: 0.8em;">
-				<strong>Uncovering the Hidden Side of Central Bank Communication: Evidence from Social Media</strong> - with 
-				<a class="cactus-link" href="https://faculty.unibocconi.eu/donatomasciandaro/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Donato Masciandaro</a>, 
-				<a class="cactus-link" href="https://ideas.repec.org/f/ppa1446.html" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Conor Parle</a> and 
-				<a class="cactus-link" href="https://davideromelli.com/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Davide Romelli</a>
+
+			<li class="mb-3">
+				<strong>Uncovering Disagreement in Central Bank Communication: Social Media and Monetary Policy Surprises</strong>
+				— with
+				<a class="cactus-link" href="https://faculty.unibocconi.eu/donatomasciandaro/" target="_blank" rel="noopener noreferrer">Donato Masciandaro</a>,
+				<a class="cactus-link" href="https://ideas.repec.org/f/ppa1446.html" target="_blank" rel="noopener noreferrer">Conor Parle</a>, and
+				<a class="cactus-link" href="https://davideromelli.com/" target="_blank" rel="noopener noreferrer">Davide Romelli</a>
+
+				<details class="group mt-1 ml-4">
+					<summary class="cursor-pointer flex items-center gap-2 select-none">
+					<!-- Chevron -->
+					<span class="inline-block border-r border-b w-2.5 h-2.5 rotate-[-45deg] transition-transform group-open:rotate-45"></span>
+					<!-- Toggle labels -->
+					<span class="group-open:hidden underline">Show abstract</span>
+					<span class="hidden group-open:inline underline">Hide abstract</span>
+					</summary>
+
+					<p class="mt-2 text-[0.75rem]">
+					Central bank announcements generate vast social media discussions that reveal how markets interpret monetary policy.
+					We assemble a dataset of over 125 million tweets surrounding ECB, Fed, and BoE policy decisions. Using AI based
+					classification, we distinguish relevant tweets and categorize them as hawkish or dovish, constructing a real time
+					measure of disagreement about future policy. Higher social media disagreement is strongly associated with larger
+					financial market reactions following announcements, highlighting social media's value for understanding how central
+					bank communication shapes expectations.
+					</p>
+				</details>
 			</li>
+
 			<li style="margin-bottom: 0.8em;">
 				<strong>Scoring Goals, Spreading Hate: Drivers of Hate Crime in Germany</strong> - with 
 				<a class="cactus-link" href="https://sites.google.com/view/francesco-barilari/home?authuser=0" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Francesco Barilari</a>, 
@@ -79,7 +157,6 @@ import PageLayout from "@/layouts/Base.astro";
 			</li>
 		</ul>
 	</section>
-
 
 	<section class="mt-16">
 		<h1 class="title mb-4">Research & Training</h1>
