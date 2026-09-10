@@ -45,14 +45,14 @@ export default {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
         "accent-2": "hsl(var(--theme-accent-2) / <alpha-value>)",
         bgColor: "hsl(var(--theme-bg) / <alpha-value>)",
-        link: "hsl(var(--theme-link) / <alpha-value>)",
+        link: "var(--link)",
         quote: "hsl(var(--theme-quote) / <alpha-value>)",
         textColor: "hsl(var(--theme-text) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ['IBM Plex Mono', ...fontFamily.sans],
-        serif: ['IBM Plex Mono', ...fontFamily.serif],
-        mono: ['IBM Plex Mono', ...fontFamily.mono],
+        sans: ['Courier New', 'Courier', ...fontFamily.mono],
+        serif: ['Courier New', 'Courier', ...fontFamily.mono],
+        mono: ['Courier New', 'Courier', ...fontFamily.mono],
       },
       spacing: {
         // Adjust default spacing to reduce padding/margins throughout the site
@@ -127,4 +127,3 @@ export default {
     },
   },
 } satisfies Config;
-

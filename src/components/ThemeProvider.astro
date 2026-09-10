@@ -1,47 +1,25 @@
-{/* Inlined to avoid FOUC. This is a parser blocking script. */}
+{/* The homepage starts in dark mode; an explicit choice is remembered. */}
 <script is:inline>
-	const lightModePref = window.matchMedia("(prefers-color-scheme: light)");
-
-	function getUserPref() {
-		const storedTheme = typeof localStorage !== "undefined" && localStorage.getItem("theme");
-		return storedTheme || (lightModePref.matches ? "light" : "dark");
-	}
-
-	function setTheme(newTheme) {
-		if (newTheme !== "light" && newTheme !== "dark") {
-			return console.warn(
-				`Invalid theme value '${newTheme}' received. Expected 'light' or 'dark'.`,
-			);
-		}
-
-		const root = document.documentElement;
-
-		// root already set to newTheme, exit early
-		if (newTheme === root.getAttribute("data-theme")) {
-			return;
-		}
-
-		root.setAttribute("data-theme", newTheme);
-
-		const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
-		const bgColour = getComputedStyle(document.body).getPropertyValue("--theme-bg");
-		colorThemeMetaTag.setAttribute("content", `hsl(${bgColour})`);
-		if (typeof localStorage !== "undefined") {
-			localStorage.setItem("theme", newTheme);
-		}
-	}
-
-	// initial setup
-	setTheme(getUserPref());
-
-	// View Transitions hook to restore theme
-	document.addEventListener("astro:after-swap", () => setTheme(getUserPref()));
-
-	// listen for theme-change custom event, fired in src/components/ThemeToggle.astro
-	document.addEventListener("theme-change", (e) => {
-		setTheme(e.detail.theme);
-	});
-
-	// listen for prefers-color-scheme change.
-	lightModePref.addEventListener("change", (e) => setTheme(e.matches ? "light" : "dark"));
+	(() => {
+		const readTheme = () => {
+			try { return localStorage.getItem("homepage-theme") === "light" ? "light" : "dark"; }
+			catch { return "dark"; }
+		};
+		const setTheme = (theme) => {
+			document.documentElement.dataset.theme = theme;
+			document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#000000" : "#ffffff");
+			document.dispatchEvent(new CustomEvent("theme-updated"));
+		};
+		setTheme(readTheme());
+		document.addEventListener("astro:after-swap", () => setTheme(readTheme()));
+		document.addEventListener("theme-change", (event) => {
+			const theme = event.detail?.theme;
+			if (theme !== "light" && theme !== "dark") return;
+			try { localStorage.setItem("homepage-theme", theme); } catch {}
+			setTheme(theme);
+		});
+		window.addEventListener("storage", (event) => {
+			if (event.key === "homepage-theme" || event.key === null) setTheme(readTheme());
+		});
+	})();
 </script>
