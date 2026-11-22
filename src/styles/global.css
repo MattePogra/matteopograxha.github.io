@@ -113,8 +113,15 @@
 .retro-nav a { padding-block: 4px; white-space: nowrap; }
 #main { padding-top: 30px; }
 .profile-section { display: grid; grid-template-columns: 202px minmax(0, 1fr); gap: 32px; align-items: start; }
-.profile-photo { margin: 0; }
-.profile-photo img { display: block; width: 100%; height: auto; padding: 4px; border: 1px solid var(--rule); }
+.profile-photo { margin: 0; padding: 4px; border: 1px solid var(--rule); }
+.profile-photo-crop { overflow: hidden; }
+.profile-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	transform: scale(1.25);
+	transform-origin: 52% 55%;
+}
 .profile-copy { min-width: 0; }
 .intro-heading { font-size: 18px; font-weight: 700; margin: 0 0 12px; }
 .profile-copy p { margin: 0 0 14px; }
