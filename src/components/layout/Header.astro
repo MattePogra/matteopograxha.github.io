@@ -1,14 +1,14 @@
 ---
 import ThemeToggle from "../ThemeToggle.astro";
 const NameTag = Astro.url.pathname === "/" ? "h1" : "p";
-const cvUrl = "https://www.dropbox.com/scl/fi/prmizmabb0e3yne1084o6/CV_MP.pdf?rlkey=u80rmrqtzt0t7fn4qv20ll2od&st=x7ag2u4k&dl=0";
+const cvUrl = "/CV_academic.pdf";
 ---
 
 <header class="retro-header" id="top">
 	<div class="header-meta"><ThemeToggle /></div>
 	<div class="masthead">
 		<NameTag class="site-name"><a href="/">Matteo Pograxha</a></NameTag>
-		<p>Political Economy &amp; Media Economics</p>
+		<p>Data Science &amp; Media Economics</p>
 	</div>
 	<nav class="retro-nav" aria-label="Main navigation">
 		<a href="/#about">[ About ]</a>
@@ -16,6 +16,6 @@ const cvUrl = "https://www.dropbox.com/scl/fi/prmizmabb0e3yne1084o6/CV_MP.pdf?rl
 		<a href="/#experience">[ Research &amp; Training ]</a>
 		<a href="/#teaching">[ Teaching ]</a>
 		<a href={cvUrl} target="_blank" rel="noopener noreferrer">[ CV / PDF ]</a>
-		<a href="mailto:matteopograxha@gmail.com">[ E-mail ]</a>
+		<a href="mailto:matteopograxha@protonmail.com">[ E-mail ]</a>
 	</nav>
 </header>
